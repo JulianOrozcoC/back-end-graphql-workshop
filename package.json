@@ -1,0 +1,25 @@
+{
+  "name": "back-end-graphql-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orozco1993/back-end-graphql-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orozco1993/back-end-graphql-workshop/issues"
+  },
+  "homepage": "https://github.com/Orozco1993/back-end-graphql-workshop#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "express-graphql": "^0.6.12",
+    "graphql-tools": "^4.0.2"
+  }
+}
