@@ -2,14 +2,15 @@ type Comment {
   _id: ID!
   author: String
   content: String
-  postId: ID
+  postId: ID!
+  post: Post
   active: Boolean
 }
 
 input CommentInput {
   author: String
   content: String
-  postId: ID
+  postId: ID!
   active: Boolean
 }
 

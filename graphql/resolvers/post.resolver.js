@@ -9,6 +9,11 @@ const posts = async (parent, args, { Post }) => {
   return results.map(objIdToString);
 };
 
+const comments = async ({ _id }, args, { Comment }) => {
+  const results = await Comment.find({ postId: _id, active: true });
+  return results.map(objIdToString);
+};
+
 const createPost = async (parent, args, { Post }) => {
   try {
     return await Post.create(args.input);
@@ -41,4 +46,5 @@ const deletePost = async (parent, args, { Post }) => {
 export default {
   Query: { post, posts },
   Mutation: { createPost, updatePost, deletePost },
+  Post: { comments },
 };
