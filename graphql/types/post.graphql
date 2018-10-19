@@ -15,7 +15,7 @@ input PostInput {
 
 type Query {
   post(_id: ID): Post
-  posts(input: PostInput): [Post]!
+  posts: [Post]!
 }
 
 type Mutation {
