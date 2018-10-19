@@ -1,0 +1,25 @@
+type Comment {
+  _id: ID!
+  author: String
+  title: String
+  body: String
+  active: Boolean
+}
+
+input CommentInput {
+  author: String
+  body: String
+  post: ID!
+  active: Boolean
+}
+
+type Query {
+  comments(input: CommentInput): [Comment]!
+  comment(_id: ID): Comment
+}
+
+type Mutation {
+  createComment(input: CommentInput): Comment!
+  updateComment(_id: ID, input: CommentInput): Comment!
+  deleteComment(_id: ID): Comment!
+}
