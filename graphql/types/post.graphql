@@ -3,7 +3,6 @@ type Post {
   title: String
   content: String
   author: String
-  comments: [Comment]
   active: Boolean
 }
 
@@ -21,6 +20,4 @@ type Query {
 
 type Mutation {
   createPost(input: PostInput): Post!
-  updatePost(_id: ID, input: PostInput): Post!
-  deletePost(_id: ID): Post!
 }
