@@ -34,5 +34,5 @@ app.use(
 );
 
 app.listen({ port: PORT }, () => {
-  logger.info(`🚀 Server ready at http://localhost:${PORT}/graphql`);
+  console.log(`🚀 Server ready at http://localhost:${PORT}/graphql`);
 });
