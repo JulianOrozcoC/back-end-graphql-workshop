@@ -1,8 +1,8 @@
 import Post from '../../mongoose/post';
 
-// Get post ID by post Name
-export const postID = async name => {
-  const post = await Post.findOne({ name }, (err, doc) => {
+// Get post ID by post title
+export const postID = async title => {
+  const post = await Post.findOne({ title }, (err, doc) => {
     if (err) {
       console.log(err);
     }

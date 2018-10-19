@@ -35,7 +35,7 @@ const dbSeeder = async () => {
   const collections = [Post, Comment];
   await clearCollections(collections);
   insertData(Post, posts);
-  insertData(Comment, await comments());
+  // insertData(Comment, await comments());
   db.close();
 };
 
