@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
 const Post = mongoose.model('Post', {
-  author: String,
   title: String,
-  body: String,
+  content: String,
+  author: String,
   active: { type: Boolean, default: true },
 });
 

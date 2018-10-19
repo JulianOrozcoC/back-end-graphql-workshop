@@ -1,21 +1,21 @@
 type Comment {
   _id: ID!
   author: String
-  title: String
-  body: String
+  content: String
+  postId: ID
   active: Boolean
 }
 
 input CommentInput {
   author: String
-  body: String
-  post: ID!
+  content: String
+  postId: ID
   active: Boolean
 }
 
 type Query {
-  comments(input: CommentInput): [Comment]!
   comment(_id: ID): Comment
+  comments(input: CommentInput): [Comment]!
 }
 
 type Mutation {

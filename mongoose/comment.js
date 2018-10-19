@@ -1,10 +1,11 @@
 import mongoose from 'mongoose';
-var mongoSchema = mongoose.Schema;
+
+const { Schema } = mongoose;
 
 const Comment = mongoose.model('Comment', {
   author: String,
-  body: String,
-  post: { type: mongoSchema.Types.ObjectId, ref: 'Post' },
+  content: String,
+  postId: { type: Schema.Types.ObjectId, ref: 'Post' },
   active: { type: Boolean, default: true },
 });
 
