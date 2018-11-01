@@ -1,5 +1,3 @@
-/* eslint-disable */
-// prettier-ignore
 require('dotenv').config();
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
@@ -19,8 +17,9 @@ db.init();
 
 const { PORT } = process.env;
 const schema = makeExecutableSchema({ typeDefs, resolvers });
+
 const app = express();
-app.use(cors());
+
 app.use(
   '/graphql',
   graphqlHTTP({

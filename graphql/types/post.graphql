@@ -1,21 +1,22 @@
 type Post {
   _id: ID!
-  author: String
   title: String
-  body: String
+  content: String
+  author: String
+  comments: [Comment]
   active: Boolean
 }
 
 input PostInput {
-  author: String
   title: String
-  body: String
+  content: String
+  author: String
   active: Boolean
 }
 
 type Query {
-  posts(input: PostInput): [Post]!
   post(_id: ID): Post
+  posts(input: PostInput): [Post]!
 }
 
 type Mutation {
